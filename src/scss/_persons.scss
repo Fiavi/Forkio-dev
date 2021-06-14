@@ -1,0 +1,349 @@
+.slider{
+    font-family: $montserrat;
+    margin-top: 70px;
+    position: relative;
+    display: flex;
+    padding-bottom: 4%;
+}
+.slide{
+    position: relative;
+    flex-direction: column;
+    width: 93%;
+    display: none;
+    margin: 0 auto;
+    
+    &__person{
+        display: flex;
+        flex-direction: column;
+    }
+    &__img{
+        display: block;
+        padding-bottom: 20px;
+        margin: 0 auto;
+    }
+    &__name{
+        color:#474747;
+        font-size: 24px;
+        font-weight: 700;
+        padding-bottom: 30px;
+        text-align: center;
+    }
+    &__nickname{
+        display: block;
+        color:#8d81ac;
+        font-weight: 400;
+        font-size: 16px;
+        padding-top: 7px;
+    }
+    &__discription{
+        width: 204px;
+        flex-direction: column;
+        display: flex;
+        margin: 0 auto;
+    }
+    &__text{
+        font-family: $lato;
+        font-size: 16px;
+        color: #333333;
+        line-height: 24px;
+        transform: scaleX(1.0059);
+        span{
+            color:#8d81ac;
+            font-size: 16px;
+        }
+    }
+    &__time{
+        color:#848e97;
+        font-size: 16px;
+        transform: scaleX(1.0059);
+        padding-top: 16px;
+    }
+}
+.active{
+    display: flex;
+}
+
+#btn-next{
+    position: absolute;
+    top: 25%;
+    right: 0%;
+    font-size: 25px;
+    opacity: 0.5;
+    padding: 20px;
+    &:hover{
+        cursor: pointer;
+    }
+}
+#btn-prev{
+    position: absolute;
+    left: 0%;
+    top: 25%;
+    font-size: 25px;
+    opacity: 0.5;
+    padding: 20px;
+    &:hover{
+        cursor: pointer;
+    }
+}
+.buttons{
+    display: flex;
+    flex-direction: column;
+    margin-top: 35px;
+}
+.social{
+    border-radius: 4px;
+    display: flex;
+    width: 70%;
+    flex-direction: column;
+    align-self: center;
+        &__followers{
+            color: #848e97;
+            font-family: $montserrat;
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+}
+.btns{
+ height: 50px;
+    &--github{
+        background-color:  #f3f3f3;
+        color: #000;
+    }
+    &--facebook{
+        background-color:  #3b5998;
+        color: #fff;
+        padding-right: 15%;
+    }
+    &--twitter{
+        background-color:  #26a6d1;
+        color: #fff;
+    }
+ &__img{
+     font-size: 20px;
+     color: #fff;
+     left: 10%;
+    position: absolute;
+
+     &--github{
+         color: #000;
+     }
+ }
+ &__text{
+     font-family: $montserrat;
+     color:  #fff;
+     font-size: 21px;
+     margin-left: 20%;
+
+     &--github{
+         color: #000;
+     }
+ }  
+}
+
+@media (min-width : 401px) and (max-width:481px){
+    .slide{
+        &__person{
+            flex-direction: unset;
+            margin: 0 auto;
+            width: 87%;
+        }
+        &__name{
+            padding-top: 20px;
+        }
+        &__nickname{
+            display: block;
+            text-align: left;
+        }
+        &__discription{
+            width: 326px;
+        }
+        &__text{
+            height: 69px;
+            overflow: hidden;
+            font-size: 17px;
+            color: #333333;
+            transform: scaleX(1.0059);
+        }
+        &__time{
+            padding-top: 22px;
+        }
+    }
+    #btn-next{
+        right: 0%;
+        top: 17%;
+    }
+    #btn-prev{
+        left: 0%;
+        top: 17%;
+    }
+}
+
+@media (min-width : 481px) and (max-width:992px){
+    .slide{
+        position: relative;
+        flex-direction: column;
+        display: none;
+        margin: 0 auto;
+        width: 70%;
+        
+        &__person{
+            flex-direction: row;
+            align-items: center;
+            width: 100%;
+            justify-content: center;
+        }
+    
+        &__img{
+            display: block;
+            padding-bottom: 25px;
+            margin: 0;
+        }
+        &__name{
+            color:#474747;
+            font-size: 24px;
+            font-weight: 700;
+            padding-left: 25px;
+        }
+        &__nickname{
+            display: block;
+            color:#8d81ac;
+            font-size: 16px;
+            padding-top: 7px;
+            text-align: left;
+    
+        }
+        &__discription{
+            width: 100%;
+            flex-direction: column;
+            display: flex;
+            margin: 0 auto;
+        }
+        &__text{
+            font-family: $lato;
+            font-size: 17px;
+            color: #333333;
+            transform: scaleX(1.0059);
+            span{
+                color:#8d81ac;
+                font-size: 16px;
+            }
+        }
+        &__time{
+            color:#848e97;
+            font-size: 16px;
+            transform: scaleX(1.0059);
+            padding-top: 16px;
+        }
+    }
+    .active{
+        display: flex;
+    }
+    #btn-next{
+        position: absolute;
+        top: 20%;
+        right: 5%;
+    }
+    #btn-prev{
+        position: absolute;
+        left: 5%;
+        top: 20%;
+    }
+
+    .buttons{
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-around;
+        justify-content: space-evenly;
+    }
+    .social{
+        width: 35%;
+        
+    }
+    .btns{
+        font-size: 20px;
+        
+    }
+}
+
+@media (min-width : 993px){
+    .social{
+        width: 25%;
+    }
+    .slide{
+        position: relative;
+        flex-direction: column;
+        display: none;
+        margin: 0 auto;
+        width: 70%;
+        
+        &__person{
+            flex-direction: row;
+            align-items: center;
+            width: 100%;
+            justify-content: center;
+        }
+    
+        &__img{
+            display: block;
+            padding-bottom: 25px;
+            margin: 0;
+        }
+        &__name{
+            color:#474747;
+            font-size: 24px;
+            font-weight: 700;
+            padding-left: 25px;
+        }
+        &__nickname{
+            display: block;
+            color:#8d81ac;
+            font-size: 16px;
+            padding-top: 7px;
+            text-align: left;
+    
+        }
+        &__discription{
+            width: 100%;
+            flex-direction: column;
+            display: flex;
+            margin: 0 auto;
+        }
+        &__text{
+            font-family: "Lato",sans-serif;
+            font-size: 17px;
+            color: #333333;
+            transform: scaleX(1.0059);
+            span{
+                color:#8d81ac;
+                font-size: 16px;
+            }
+        }
+        &__time{
+            color:#848e97;
+            font-size: 16px;
+            transform: scaleX(1.0059);
+            padding-top: 16px;
+        }
+    }
+    .active{
+        display: flex;
+    }
+    #btn-next{
+        position: absolute;
+        top: 21%;
+        right: 8%;
+    }
+    #btn-prev{
+        position: absolute;
+        left: 8%;
+        top: 21%;
+    }
+    .buttons{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .btns{
+        font-size: 23px;
+        padding-right: 32%;
+    }
+}

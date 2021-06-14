@@ -1,0 +1,86 @@
+.navigation__link:before{
+    display: block;
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 0;
+    background-color: #8d81ac;;
+    transition: width .5s ease-in-out, left .5s ease-in-out;
+    left: 50%;
+    bottom: 0;
+    top: 15px;
+}
+.navigation__link:after{
+    display: block;
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 0;
+    background-color: #8d81ac;;
+    transition: width .5s ease-in-out;
+    left: 50%;
+    bottom: 0;
+    top: 15px;
+}
+.navigation__link:hover:before{
+    width: 50%;
+    left: 0;
+}
+.navigation__link:hover::after{
+    width: 50%;
+}
+.touch__btn--hover{
+    background-color: #fff;
+    color: #8d81ac;
+    border: 1px solid #8d81ac;
+    border-radius: 21px;
+    width: 140px;
+    height: 42px;
+    font-size: 15px;
+    text-align: center;
+    padding-top: 14px;
+}
+// .btns--github:hover{
+//         background-color: #2b414d;
+//         border: 1px solid #2b414d;
+//         color: #fff;
+// }
+// .btns--twitter:hover{
+//     background-color: #fff;
+//     color: #26a6d1;
+//     border: 1px solid #26a6d1;
+// }
+// .btns--facebook:hover{
+//     background-color: #fff;
+//     color: #8d81ac;
+//     border: 1px solid #8d81ac;
+// }
+.social:hover{
+    .btns--github {
+        background-color: #2b414d;
+        border: 1px solid #2b414d;
+        color: #fff;
+    }
+
+    .btns--twitter {
+        background-color: #fff;
+        color: #26a6d1;
+        border: 1px solid #26a6d1;
+    }
+
+    .btns--facebook {
+        background-color: #fff;
+        color: #8d81ac;
+        border: 1px solid #8d81ac;
+    }
+    .btns__img{
+        color: #26a6d1;
+    }
+    .btns__img--github{
+        color: #fff;
+    }
+    .btns__img--facebook{
+        color: #8d81ac;
+    }
+
+}

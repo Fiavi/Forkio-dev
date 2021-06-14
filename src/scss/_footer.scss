@@ -1,0 +1,98 @@
+.content{
+    grid-template-rows: repeat(4,145px);
+    grid-row-gap: 30px;
+}
+.forkio{
+    &__title{
+        font-size: 24px;
+        font-weight: 400;
+        margin-top: 40px;
+        margin-bottom: 25px;
+        text-transform: uppercase;
+    }
+    &__text{
+        font-size: 14px;
+        font-weight: 400;
+        width: 251px;
+    }
+}
+.navigation{
+    font-family:$montserrat;
+
+    &__title{
+        font-size: 16px;
+        font-weight: 700;
+        margin-bottom: 15px;
+    }
+    &__menu{
+        width:122px;
+    }
+    &__item{
+        font-size: 15px;
+        padding-bottom: 5px;
+    }
+}
+.contact{
+    font-family: $montserrat;
+
+    &__phone{
+        font-size: 30px;
+        padding-bottom: 10px;
+    }
+    &__available{
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+    &__city{
+        font-size: 16px;
+        font-weight: 600;
+        padding-bottom: 15px;
+        padding-top: 30px;
+    }
+}
+.info{
+    font-family: $montserrat;
+    &__title{
+        font-size: 16px;
+        font-weight: bold;
+        padding-bottom: 20px;
+    }
+    &__text{
+        font-size: 14px;
+        font-weight: 400;
+        width: 90%;
+        line-height: 23px;
+        letter-spacing: 0.28px;
+    }
+
+}
+@media (min-width : 481px) and (max-width:992px){
+    .content{
+        grid-template-rows: repeat(2, 210px);
+        grid-template-columns: repeat(2, 50%);
+    }
+    .forkio__title{
+        margin-top: 66px;
+    }
+    .navigation__title{
+        margin-top: 66px;
+    }
+}
+@media (min-width : 993px){
+    .content{
+        grid-template-rows: repeat(1, 300px);
+        grid-template-columns: 25% 20% 30% 25%;
+    }
+    .forkio__title{
+        margin-top: 61px;
+    }
+    .navigation__title{
+        margin-top: 61px;
+    }
+    .contact__phone{
+        margin-top: 61px;
+    }
+    .info{
+        margin-top: 61px;
+    }
+}

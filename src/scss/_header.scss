@@ -1,0 +1,410 @@
+.header {
+	background-image: url('images/header-bg.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding-bottom: 424px;
+	position: relative;
+	
+
+	&__bg-color {
+		background-color: rgb(38, 38, 38);
+		padding: 31px 0;
+	}
+
+	&--position {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		align-content: center;
+	}
+
+	&__logo {
+		background-image: url('images/header-logo.png');
+		display: flex;
+		align-items: center;
+		width: 43px;
+		height: 41px;
+		position: relative;
+
+		& span {
+			font-family: $lato;
+			text-transform: uppercase;
+			color: $color-purple;
+			font-size: 24px;
+			font-weight: 700;
+			margin-left: 56px;
+			display: none;
+			transition: all 0.5s ease-out;
+
+			&:before {
+				content: '';
+				position: absolute;
+				width: 43px;
+				height: 41px;
+				left: 0;
+				top: 0;
+				background-image: url('images/header-logo-hover.png');
+				opacity: 0;
+				transition: all 0.5s ease-out;
+			}
+		}
+	}
+
+	&__logo:hover {
+
+		& span {
+			color: $color-white;
+
+			&:before {
+				opacity: 1;
+			}
+		}
+	}
+
+	&__btn {
+		font-size: 15px;
+		padding: 15px 27px;
+		line-height: 15px;
+	}
+
+	&__nav {
+	    width: 31px;
+	    height: 31px;
+	    position: relative;
+	    text-indent: -9999px;
+	    overflow: hidden;
+	}
+
+	&__nav span, &__nav::before, &__nav::after {
+	    background: white;
+	    border-radius: 4px;
+	    position: absolute;
+	    top: 17px;
+	    left: 3px;
+	    right: 3px;
+	    height: 3px;
+	    margin-top: -2px;
+	    -webkit-transition: all 0.2s linear;
+	    transition: all 0.2s linear;
+	}
+
+	&__nav::before {
+		content: '';
+		top: 8px;
+		left: 30%;
+	}
+
+	&__nav::after {
+		content: '';
+		top: 26px;
+	}
+
+	&__nav.active span {
+		opacity: 0;
+	}
+
+	&__nav.active:after, &__nav.active:before {
+		-moz-transform: rotate(45deg);
+		-webkit-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+		transform: rotate(45deg);
+		top: 16px;
+		left: 5%;
+		right: 5%;
+	}
+
+	&__nav.active:after {
+		-moz-transform: rotate(-45deg);
+		-webkit-transform: rotate(-45deg);
+		-ms-transform: rotate(-45deg);
+		transform: rotate(-45deg);
+	}
+
+	&__navbar {
+		display: flex;
+		flex-direction: column;
+		position: relative;
+	}
+
+	&__item {
+		font-family: $montserrat;
+	}
+
+	&__main-title {
+		font-family: $montserrat;
+		text-align: center;
+		padding-top: 43px;
+	}
+
+	& h1 {
+		color: $color-white;
+		font-size: 48px;
+		font-weight: 700;
+	}
+
+	&__slogan {
+		font-family: $lato;
+		color:  $color-purple;
+		font-size: 18px;
+		line-height: 30px;
+		width: 90%;
+		margin: 20px auto;
+	}
+
+	&__version {
+		font-size: 16px;
+		text-transform: uppercase;
+		color: $color-dull-green;
+	}
+
+	&__trial {
+		position: absolute;
+		bottom: -8.5%;
+		text-align: center;
+		width: 90%;
+	}
+
+	&__btn-download {
+		padding: 4% 9%;
+		font-size: 18px;
+	}
+
+	&__text {
+		font-family: $montserrat;
+		font-size: 14px;
+		color: $color-dull-green;
+		margin-top: 29px;
+	}
+	
+}
+
+@media (min-width: 401px) and (max-width: 480px) {
+	.header {
+		padding-bottom: 454px;
+		background-image: url('images/header-bg-480.png');
+	
+	&__logo {
+		& span {
+			display: block;
+		}
+	}
+
+	&__btn {
+		margin-left: 93px;
+	}
+
+	&__main-title {
+		margin-top: 30px;
+	}
+
+	& h1 {
+		font-size: 54px;
+	}
+
+	&__slogan {
+		font-size: 20px;
+		margin: 35px auto 23px auto;
+	}
+
+	&__version {
+		font-size: 17px;
+		
+	}
+
+	&__trial {
+		bottom: -10%;
+	}
+
+	&__btn-download {
+		padding: 4% 13%;
+		font-size: 21px;
+	}
+
+	&__text {
+		margin-top: 42px;
+	}
+
+}
+}
+
+@media (min-width : 481px) and (max-width: 992px) {
+	.header {
+		background-image: url('images/header-bg-768.png');
+
+		&__bg-color {
+			padding: 22px 0;
+		}
+
+		&__navbar {
+			margin-top: 22px;
+		}
+
+		&__btn {
+			padding: 12px 35px;
+		}
+
+		&__main-title {
+			padding-top: 50px;
+		}
+
+		& h1 {
+			font-size: 72px;
+		}
+
+		&__trial {
+			bottom: -11%;
+		}
+
+		&__btn-download {
+			padding: 2.5% 9%;
+			font-size: 21px;
+		}
+
+		&__text {
+			margin-top: 42px;
+		}
+
+	}
+}
+
+@media (min-width: 993px) {
+	.header {
+		background-image: url('images/header-bg-1200.png');
+		background-position: center;
+
+
+		&__btn {
+			padding: 12px 35px;
+		}
+
+		&__navbar {
+			position: absolute;
+			right: 20%;
+			top: 5.2%;
+		}
+
+		&__main-title {
+			padding-top: 60px;
+		}
+
+		& h1 {
+			font-size: 82px;
+		}
+
+		&__slogan {
+		  	font-size: 30px;
+		}
+
+		&__version {
+			margin-bottom: 100px;
+		}
+
+		&__trial {
+			bottom: -9.8%;
+		}
+
+		&__btn-download {
+			padding: 1.5% 6%;
+			font-size: 21px;
+		}
+
+		&__text {
+			margin-top: 42px;
+		}
+	}
+}
+
+@media (min-width: 481px) {
+	.header {
+		
+		& span {
+			display: block;
+		}
+
+		&__navbar {
+			flex-direction: row;
+			justify-content: center;
+
+			& li:nth-child(1) {
+				display: none;
+			}
+
+			& li:nth-child(5) {
+				margin-right: 0;
+			}
+		}
+
+		&__item {
+			margin-right: 48px;
+			transition: all 0.5s ease;
+
+			& a {
+				font-size: 0.8em;
+				color: $color-purple;
+				font-weight: bold;
+			}
+		}
+
+		&__nav {
+			display: none;
+		}
+
+		&__item:hover {
+			webkit-transform: scale(1.2);
+		  	-ms-transform: scale(1.2);
+		  	transform: scale(1.2);
+
+			& a {
+				color: $color-white;
+				
+			}	
+		}
+
+	}
+}
+
+@media (max-width: 480px) {
+	.header {
+
+	&__content {
+		position: absolute;
+		top: 105px;
+		background-color: #333333;
+		width: 100%;
+		display: none;
+	}
+	
+	&__content.active {
+		display: block;
+	}
+
+	&__item {
+
+		& a {
+			padding: 7% 0;
+			padding-left: 6%;
+			display: block;
+			font-size: 24px;
+			border-top: 1px solid #3b3b3b;
+			color: $color-white;
+	 	}
+	}
+
+	&__item:hover {
+
+		& a {
+			color: $color-purple;
+		}
+
+		& a::before {
+			content: '';
+		    position: absolute;
+		    margin-top: -8px;
+		    width: 4px;
+		    height: 43px;
+		    left: 0;
+		    background: #8d81ac;
+		}
+	}
+}
+}

@@ -1,0 +1,71 @@
+.touch{
+    &__title{
+        color:
+        #323232;
+        font-size: 24px;
+        font-weight: 700;
+        padding-top: 30px;
+        padding-bottom: 25px;
+        text-align: center;
+    }
+    &__btn{
+        border-radius: 21px;
+        background-color:#8d81ac;
+        width: 140px;
+        height: 42px;
+        text-align: center;
+        padding-top: 15px;
+        color:#ffffff;
+        font-size: 13px;
+        text-transform: uppercase;
+        margin-bottom: 5%;
+    }
+}
+.input{
+    &__place{
+        border-radius: 50px;
+        background-color: #fff;
+        border:none;
+        margin-bottom: 20px;
+        height: 40px;
+        font-size: 17px;
+        padding-left: 28px;
+        outline: none;
+    }
+}
+
+@media (min-width : 481px) and (max-width:992px){
+    .subscribe{
+        height: 215px;
+    }
+    .input{
+        flex-direction: row;
+        justify-content: space-between;
+        &__place{
+           width: 43%;
+        }
+    }
+}
+@media (min-width : 993px){
+    .touch{
+        height: 134px;
+        flex-direction: row;
+        justify-content: space-between;
+        &__title{
+            width: 30%;
+        }
+        &__btn{
+            margin-bottom: 0;
+        }
+    }
+    .input{
+        flex-direction: row;
+        justify-content: space-around;
+        justify-content: space-evenly;
+        width: 70%;
+        &__place{
+            margin-bottom: 0;
+            width: 40%;
+        }
+    }
+}

@@ -1,0 +1,128 @@
+
+@import '_reset.scss';
+@import '_var.scss';
+
+html, body{
+    min-width: 320px;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+}
+.container {
+	width: 90%;
+	margin: 0 auto;
+}
+
+.btn {
+	font-family: $montserrat;
+	background-color: $color-purple;
+	color: $color-white;
+	font-weight: 700;
+	border-radius: 40px;
+	transition: all 0.3s ease-out;
+}
+
+.btn:hover {
+	background: $color-white;
+	color: $color-purple;
+	box-shadow: inset 0 0 0 1px $color-purple;
+}
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+.btns{
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    margin-bottom: 18px;
+    justify-content: flex-end;
+    font-size: 23px;
+    padding-right: 20%;
+    font-family: $montserrat;
+}
+.persons{
+    text-align: center;
+    position: relative;
+}
+.subscribe{
+    font-family: $montserrat;
+    background-color: rgb(244, 244, 244);
+}
+.touch{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.input{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.content{
+    display: grid;
+}
+.forkio{
+    font-family:$montserrat;
+    &__title{
+        color:#333;
+        text-transform: uppercase;
+    }
+    &__text{
+        color:#848e97;
+    }
+}
+.navigation{
+    font-family:$montserrat;
+
+    &__title{
+        color:#323232;
+    }
+    &__link{
+        color:#8d81ac;
+    }
+}
+.contact{
+    font-family: $montserrat;
+
+    &__phone{
+        font-weight: bold;
+        color:#31384d;
+    }
+    &__available{
+        color:#848e97;
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+    &__city{
+        color:#323232;
+    }
+    &__coordinates{
+        color:#848e97;
+        font-size: 14px;
+    }
+}
+.info{
+    font-family: $montserrat;
+    &__title{
+        color:#323232;
+    }
+    &__text{
+        color:#848e97;
+    }
+
+}
+
+@import '_header.scss';
+@import '_revolutionary.scss';
+@import "_youget.scss";
+@import "_persons.scss";
+@import '_about.scss';
+@import '_pricing.scss';
+@import "_subscribe.scss";
+@import "_footer.scss";
+@import "_hover.scss";
+
